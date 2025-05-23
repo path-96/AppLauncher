@@ -390,7 +390,6 @@ const AppShelfLayout = () => {
 
   return (
     <SidebarProvider defaultOpen>
-
       <Sidebar variant="sidebar" collapsible="icon" side="left"> {/* Category Sidebar */}
         <SidebarHeader className="p-4">
           <div className="flex flex-col items-start group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:gap-0 gap-2">
@@ -473,7 +472,7 @@ const AppShelfLayout = () => {
               <h2 className="text-2xl font-semibold">
                   {isClient && selectedCategoryId ? (categories.find(c=>c.id === selectedCategoryId)?.name || "") :
                    (isClient && categories.length > 0 ? "Project選択" :
-                   (isClient ? "作成したProjectなし" : ""))}
+                   (isClient ? "作成したProject無" : ""))}
                   {!isClient && ""}
               </h2>
               
@@ -686,8 +685,8 @@ const AppShelfLayout = () => {
            <div className="p-6 overflow-y-auto space-y-4">
                <div className="space-y-2">
                  <div>
-                    <Label htmlFor="wirelessIp" className="text-sm">有線IP:</Label>
-                <Button variant="outline" id="wirelessIp" className="w-full mt-1 justify-center h-9">自動</Button>
+                    <Label htmlFor="wireIp" className="text-sm">有線IP:</Label>
+                <Button variant="outline" id="wireIp" className="w-full mt-1 justify-center h-9">自動</Button>
                     <Label htmlFor="globalIp" className="text-sm">社内IPアドレス:</Label>
                     <div className="flex items-center gap-2 mt-1">
                         <Input
